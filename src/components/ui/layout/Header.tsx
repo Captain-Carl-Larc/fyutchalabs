@@ -34,7 +34,7 @@ export default function Header() {
     <header
       className={`
         fixed top-0 left-0 right-0 z-50
-        bg-zinc-950 transition-all duration-300
+        bg-zinc-200 transition-all duration-300
         ${isScrolled ? 'border-b border-zinc-800' : ''}
       `}
     >

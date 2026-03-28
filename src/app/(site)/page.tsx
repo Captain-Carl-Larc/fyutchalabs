@@ -1,6 +1,14 @@
+import Hero from '@/components/sections/home/Hero'
+import ServicesPreview from '@/components/sections/home/ServicesPreview'
+import ProjectsPreview from '@/components/sections/home/ProjectsPreview'
 export default function Home (){
   return(
-  <h1 className="font-bold text-blue-600 text-5xl">
-    Homepage for fyutchalabs
-  </h1>
-  )}
+    <>
+    <Hero />
+    <ServicesPreview />
+    <ProjectsPreview/>
+  </>
+  )
+  }
+  
+  
