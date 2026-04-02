@@ -10,6 +10,7 @@ const featuredProjects = [
     description: 'A complete overhaul of a legacy financial platform, focusing on data visualization, user experience, and real-time transaction speeds.',
     cover_image_url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
     tech_stack: ['Next.js', 'Tailwind CSS', 'Supabase', 'Recharts'],
+    project_url: 'https://example.com' // External URL added
   },
   {
     id: '2',
@@ -18,6 +19,7 @@ const featuredProjects = [
     description: 'A high-converting iOS and Android application for a boutique fashion retailer, featuring AR try-ons and seamless checkout.',
     cover_image_url: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2070&auto=format&fit=crop',
     tech_stack: ['React Native', 'Node.js', 'Stripe', 'GraphQL'],
+    project_url: 'https://example.com' // External URL added
   }
 ];
 
@@ -60,11 +62,8 @@ export default function ProjectsPreview() {
               key={project.id} 
               className="group relative flex flex-col justify-between items-start"
             >
-              {/* Image Container with Hover Zoom */}
-              <div className="relative bg-slate-100 mb-6 rounded-2xl w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[4/3] overflow-hidden">
-                {/* NOTE: In your Next.js project, replace <img> with <Image> from 'next/image'
-                  e.g., <Image src={project.cover_image_url} alt={project.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
-                */}
+              {/* Image Container with Hover Zoom - CHANGED TO aspect-video */}
+              <div className="relative bg-slate-100 shadow-sm group-hover:shadow-md mb-6 border border-slate-200/60 rounded-2xl w-full aspect-video overflow-hidden transition-all duration-300">
                 <img
                   src={project.cover_image_url}
                   alt={`Screenshot of ${project.title}`}
@@ -72,14 +71,14 @@ export default function ProjectsPreview() {
                   loading="lazy"
                 />
                 
-                {/* Subtle overlay for better text contrast if you ever put text over images */}
+                {/* Subtle overlay for better text contrast */}
                 <div className="absolute inset-0 bg-slate-900/5 group-hover:opacity-0 transition-opacity" />
               </div>
 
               {/* Project Info */}
               <div className="w-full">
                 {/* Tech Stack Pills */}
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="z-10 relative flex flex-wrap gap-2 mb-4">
                   {project.tech_stack.map((tech) => (
                     <span 
                       key={tech}
@@ -91,15 +90,22 @@ export default function ProjectsPreview() {
                 </div>
 
                 <h3 className="mb-3 font-semibold text-slate-950 group-hover:text-slate-700 text-2xl transition-colors">
-                  <a href={`/projects/${project.slug}`}>
+                  {/* Changed to external link */}
+                  <a href={project.project_url} target="_blank" rel="noopener noreferrer">
                     <span className="absolute inset-0" aria-hidden="true" />
                     {project.title}
                   </a>
                 </h3>
                 
-                <p className="text-slate-600 line-clamp-3 leading-relaxed">
+                <p className="mb-6 text-slate-600 line-clamp-3 leading-relaxed">
                   {project.description}
                 </p>
+
+                {/* Changed wording to Visit live site */}
+                <div className="inline-flex items-center font-semibold text-slate-900 text-sm">
+                  Visit live site
+                  <ArrowUpRight className="ml-1 w-4 h-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" aria-hidden="true" />
+                </div>
               </div>
             </article>
           ))}

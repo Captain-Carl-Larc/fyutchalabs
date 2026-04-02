@@ -92,7 +92,7 @@ export default function ServicesPreview() {
         <div className="mt-16 text-center">
           <a 
             href="/services" 
-            className="inline-flex justify-center items-center bg-white hover:bg-slate-100 shadow-sm px-8 border border-slate-200 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 h-11 font-medium text-slate-950 hover:text-slate-900 text-sm transition-colors"
+            className="inline-flex justify-center items-center bg-slate-900 hover:bg-slate-800 shadow-sm px-8 border border-slate-200 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 h-11 font-medium text-white hover:text-slate-50 text-sm transition-colors"
           >
             View All Services
           </a>

@@ -9,17 +9,17 @@ export default function Hero() {
     >
       {/* Background subtle grid pattern for visual depth */}
       <div 
-        className="z-0 absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" 
+        className="z-0 absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-size:[4rem_4rem] [radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" 
         aria-hidden="true"
       />
 
       <div className="z-10 relative flex flex-col items-center mx-auto px-4 md:px-6 text-center container">
         
         {/* Eyebrow / Badge */}
-        <div className="inline-flex items-center bg-slate-50 hover:bg-slate-100 mb-8 px-3 py-1 border border-slate-200 rounded-full font-medium text-slate-800 text-sm transition-colors">
+        {/* <div className="inline-flex items-center bg-slate-50 hover:bg-slate-100 mb-8 px-3 py-1 border border-slate-200 rounded-full font-medium text-slate-800 text-sm transition-colors">
           <Sparkles className="mr-2 w-4 h-4 text-amber-500" aria-hidden="true" />
           <span>Elevating digital experiences</span>
-        </div>
+        </div> */}
 
         {/* Main Headline - Using text-balance to prevent awkward orphans */}
         <h1 
@@ -59,7 +59,7 @@ export default function Hero() {
           <p className="mb-6 font-medium text-slate-500 text-sm uppercase tracking-wider">
             Trusted by innovative teams
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale">
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 grayscale">
             {/* Placeholder logos - replace with actual SVGs later */}
             <div className="font-serif font-bold text-xl">Acme Corp</div>
             <div className="font-bold text-xl tracking-tighter">GlobalTech</div>

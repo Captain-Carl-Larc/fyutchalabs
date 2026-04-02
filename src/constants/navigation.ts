@@ -24,7 +24,6 @@ export const FOOTER_LINKS: NavLink[] = [
   { label: 'Home',           href: '/'               },
   { label: 'About',          href: '/about'           },
   { label: 'Services',       href: '/services'        },
-  { label: 'Blog',           href: '/blog'            },
   { label: 'Contact',        href: '/contact'         },
   { label: 'Privacy Policy', href: '/privacy-policy'  },
 ]
