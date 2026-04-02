@@ -171,7 +171,7 @@ export default function ContactPage() {
             
             {/* Primary Action: WhatsApp Card */}
             <a 
-              href="https://wa.me/1234567890?text=Hi%20Fyutcha%20Labs!%20I'd%20like%20to%20discuss%20a%20project." 
+              href="https://wa.me/0790070100?text=Hi%20Fyutcha%20Labs!%20I'd%20like%20to%20discuss%20a%20project." 
               target="_blank" 
               rel="noopener noreferrer"
               className="group relative flex justify-between items-center bg-[#25D366] shadow-[#25D366]/20 shadow-lg hover:shadow-[#25D366]/30 p-4 sm:p-5 rounded-xl overflow-hidden text-white transition-all hover:-translate-y-1"
@@ -202,7 +202,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-base tracking-tight">Call Us Directly</h3>
-                  <p className="font-medium text-slate-400 text-xs">+1 (555) 123-4567</p>
+                  <p className="font-medium text-slate-400 text-xs">+254 (790) 070-100</p>
                 </div>
               </div>
               <ArrowRight className="z-10 relative opacity-60 group-hover:opacity-100 ml-2 w-4 h-4 transition-all group-hover:translate-x-1 shrink-0" />
@@ -222,7 +222,7 @@ export default function ContactPage() {
                 <div className="bg-slate-50 p-2 border border-slate-100 rounded-lg shrink-0">
                   <MapPin className="w-4 h-4 text-slate-500" />
                 </div>
-                <span className="font-medium text-sm">123 Innovation Drive, NY 10001</span>
+                <span className="font-medium text-sm">Nairobi, Kenya</span>
               </div>
             </div>
 

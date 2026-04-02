@@ -13,7 +13,7 @@ export const SITE = {
 
   // Contact
   email:       'hello@fyutchalabs.com',
-  phone:       '+254 700 000 000',             // update with real number
+  phone:       '+254 (790) 070-100',             // update with real number
   location:    'Nairobi, Kenya',
 
   // Social media — leave empty string if you don't have it
@@ -33,6 +33,6 @@ export const SITE = {
   },
 
   // Used in JSON-LD structured data
-  founded:     '2024',
+  founded:     '2026',
   legalName:   'Fyutcha Labs',
 } as const

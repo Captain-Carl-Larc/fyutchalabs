@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
               <div className="inline-block bg-slate-50 mt-4 p-6 border border-slate-200 rounded-xl">
                 <p className="font-bold text-slate-900">Fyutcha Labs</p>
                 <p>Email: hello@fyutchalabs.com</p>
-                <p>Location: 123 Innovation Drive, NY 10001</p>
+                <p>Location: Nairobi,Kenya</p>
               </div>
             </section>
 

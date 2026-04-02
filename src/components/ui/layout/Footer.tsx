@@ -10,8 +10,8 @@ const SITE = {
   name: 'Fyutcha Labs',
   description: 'Building high-performance digital products for ambitious brands.',
   email: 'hello@fyutchalabs.com',
-  phone: '+1 (555) 123-4567',
-  location: '123 Innovation Drive, NY 10001',
+  phone: '+254 (790) 070-100',
+  location: 'Nairobi, Kenya',
   social: {
     twitter: '#',
     linkedin: '#',
