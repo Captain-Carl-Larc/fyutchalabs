@@ -35,25 +35,28 @@ function ContactFormContent() {
   });
 
   // Handle form submission
-  const onSubmit = async (data: ContactFormValues) => {
-    setIsSubmitting(true);
-    
-    try {
-      // TODO: Replace this timeout with your actual Supabase / API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
-      console.log('Form data ready to send to DB:', data);
-      
-      // Redirect to the thank you page on success
-      if (typeof window !== 'undefined') {
-        window.location.href = '/thank-you';
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('Something went wrong. Please try again.');
-      setIsSubmitting(false);
+const onSubmit = async (data: ContactFormValues) => {
+  setIsSubmitting(true);
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (!res.ok) {
+      const { error } = await res.json();
+      throw new Error(error || "Submission failed.");
     }
-  };
+
+    window.location.href = "/thank-you";
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("Something went wrong. Please try again.");
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
